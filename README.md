@@ -32,3 +32,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - pdfmake
 - Html2Canvas
 - Netlify
+
+### Working of the application
+
+When a user visits the website, they will find a Print button that allows them to generate a PDF report. This process involves several steps, including an API call to the FBI crime dataset to retrieve data. 
+
+The data is then processed to create a Line Chart, which uses the Highcharts library to plot the count of Burglaries on the Y-Axis and the year on the X-Axis. Once the chart is generated, it is added to the PDF report using the PDFMake library. 
+
+The report includes the date of generation, which is the same as the report generation date. The graph visible in the report is identical to the one generated at runtime in the previous step.
+
+The page numbers in the report are dynamic and will update automatically as more data is added. For this particular report, there is only one page, so the page count is displayed as "1 of 1".
